@@ -16,8 +16,8 @@
 <li>konfigurasi file `.env` seperti berikut:</li>
 </ol>
 <h3>Pengaturan Database</h3>
-```
-DB_DATABASE=indorecipe
-DB_USERNAME=root
-DB_PASSWORD=
-```
+
+* DB_DATABASE=indorecipe
+* DB_USERNAME=root
+* DB_PASSWORD=
+
