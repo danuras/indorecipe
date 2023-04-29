@@ -7,10 +7,11 @@
 <li>Xampp</li>
 </ol>
 
-<h2>Instalasi<h2>
+<h2>Instalasi</h2>
 <ol>
-<li>Run git clone `https://github.com/danuras/indorecipe.git`<li>
-<li>Run composer install di folder projek yang sudah diclone<li>
+<li>Run git clone `https://github.com/danuras/indorecipe.git`</li>
+<li>Pada xampp buat database bernama `indorecipe` dengan perintah `create database indorecepi`</li>
+<li>Run composer install di folder projek yang sudah diclone</li>
 <li>duplikat file `.env.example` lalu rename hasil duplikatnya dengan `.env`</li>
 <li>konfigurasi file `.env` seperti berikut:</li>
 </ol>
