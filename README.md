@@ -22,8 +22,8 @@
         </pre>
     </li>
 
-    <li>Run <code style="white-space: pre;">php artisan migrate</code></li>
-    <li>Run <code style="white-space: pre;">php artisan db:seed --class=DatabaseSeeder</code> untuk mengisi data di database dengan data dami</li>
+<li>Run <code style="white-space: pre;">php artisan migrate</code></li>
+<li>Run <code style="white-space: pre;">php artisan db:seed --class=DatabaseSeeder</code> untuk mengisi data di database dengan data dami</li>
 </ol>
 
 <h2>Cara Merun projek</h2>
