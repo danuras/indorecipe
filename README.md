@@ -9,7 +9,7 @@
 
 <h2>Instalasi</h2>
 <ol>
-    <li>Run git clone <code style="white-space: pre;">https://github.com/danuras/indorecipe.git</code></li>
+    <li>Run <code style="white-space: pre;">git clone https://github.com/danuras/indorecipe.git</code></li>
 <li>Pada xampp buat database bernama <code style="white-space: pre;">indorecipe</code> dengan perintah <code style="white-space: pre;">create database indorecepi</code></li>
 <li>Run <code style="white-space: pre;">composer install</code> di folder projek yang sudah diclone</li>
     <li>duplikat file <code style="white-space: pre;">.env.example</code> lalu rename hasil duplikatnya dengan <code style="white-space: pre;">.env</code></li>
