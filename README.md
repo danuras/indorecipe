@@ -27,6 +27,7 @@ DB_PASSWORD=
     <li>Run <code style="white-space: pre;">php artisan migrate</code></li>
     <li>Run <code style="white-space: pre;">php artisan db:seed --class=DatabaseSeeder</code> untuk mengisi data di database dengan data dami</li>
     <li>Run <code style="white-space: pre;">php artisan serve</code> untuk menjalankan projek</li>
+    <li>Buka url <code style="white-space: pre;">127.0.0.1</code> pada browser</li>
 </ol>
 
 <h2>Cara mengosongkan isi database</h2>
