@@ -24,10 +24,12 @@
 
 <li>Run <code style="white-space: pre;">php artisan migrate</code></li>
 <li>Run <code style="white-space: pre;">php artisan db:seed --class=DatabaseSeeder</code> untuk mengisi data di database dengan data dami</li>
+<li>Run <code style="white-space: pre;">php artisan key:generate</code> untuk membuat App Key</li>
 </ol>
 
 <h2>Cara Merun projek</h2>
 <ol>
+    <li>Run phpmyadmin dari xampp</li>
     <li>Run <code style="white-space: pre;">php artisan serve</code> untuk menjalankan projek</li>
     <li>Buka url <code style="white-space: pre;">127.0.0.1</code> pada browser</li>
 </ol>
