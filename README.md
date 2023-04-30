@@ -21,3 +21,16 @@ DB_DATABASE=indorecipe
 DB_USERNAME=root
 DB_PASSWORD=
 </pre>
+
+<h2>Cara Merun projek</h2>
+<ol>
+    <li>Run <code style="white-space: pre;">php artisan migrate</code></li>
+    <li>Run <code style="white-space: pre;">php artisan db:seed --class=DatabaseSeeder</code> untuk mengisi data di database dengan data dami</li>
+    <li>Run <code style="white-space: pre;">php artisan serve</code> untuk menjalankan projek</li>
+</ol>
+
+<h2>Cara mengosongkan isi database</h2>
+<ol>
+    <li>Run <code style="white-space: pre;">php artisan migrate:rollback</code></li>
+    <li>Run <code style="white-space: pre;">php artisan migrate</code></li>
+</ol>
