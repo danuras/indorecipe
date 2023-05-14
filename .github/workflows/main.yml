@@ -16,9 +16,7 @@ jobs:
         php-version: 8.1
         extension-csv: mbstring, bcmath
 
-    - name: Install Composer dependencies
-      run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
-  
+    
     - name: Copy environment file
       run: cp .env.example .env
       env:
