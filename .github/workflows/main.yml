@@ -18,6 +18,16 @@ jobs:
         php-version: 8.1
         extension-csv: mbstring, bcmath
     
+    - name: Copy environment file
+      run: cp .env.example .env
+      env:
+        DB_DATABASE: ${{ secrets.DB_DATABASE }}
+        DB_USERNAME: ${{ secrets.DB_USERNAME }}
+        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+    
+    - name: Generate app key
+      run: php artisan key:generate
+      
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
@@ -28,13 +38,4 @@ jobs:
         port: ${{ secrets.FTP_PORT }}
         exclude: .git*
         
-    - name: Copy environment file
-      run: cp .env.example .env
-      env:
-        DB_DATABASE: ${{ secrets.DB_DATABASE }}
-        DB_USERNAME: ${{ secrets.DB_USERNAME }}
-        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-    
-    - name: Generate app key
-      run: php artisan key:generate
 
