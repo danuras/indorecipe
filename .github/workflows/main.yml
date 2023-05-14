@@ -32,6 +32,6 @@ jobs:
         protocol: ftps #menggunnakan ftps agar lebih aman
         port: ${{ secrets.FTP_PORT }}
         exclude: .git*
-        server-dir: /htdocs
+        server-dir: /htdocs/
         
 
