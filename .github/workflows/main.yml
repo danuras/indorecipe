@@ -16,8 +16,8 @@ jobs:
         php-version: 8.1
         extension-csv: mbstring, bcmath
     
-    #- name: Install dependencies
-    #  run: composer install --no-dev --prefer-dist
+    - name: Install dependencies
+      run: composer install --no-dev --prefer-dist
       
     - name: Copy environment file
       run: cp .env.example .env
@@ -26,11 +26,11 @@ jobs:
         DB_USERNAME: ${{ secrets.DB_USERNAME }}
         DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
       
-    #- name: Generate application key
-    #  run: php artisan key:generate
+    - name: Generate application key
+      run: php artisan key:generate
 
-    #- name: Run database migrations
-    #  run: php artisan migrate --force
+    - name: Run database migrations
+      run: php artisan migrate --force
       
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
