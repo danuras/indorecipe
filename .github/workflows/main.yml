@@ -1,6 +1,8 @@
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ main ]
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
@@ -34,6 +36,9 @@ jobs:
       
     - name: Generate application key
       run: php artisan key:generate
+      
+    - name: Execute tests
+      run: vendor/bin/phpunit
       
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
