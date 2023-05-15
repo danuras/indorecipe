@@ -17,15 +17,15 @@ jobs:
       with:
         php-version: 8.1
         extension-csv: mbstring, bcmath
-    - name: Restore composer cache
-      uses: actions/cache@v2
-      with:
-        path: vendor
-        key: ${{ runner.os }}-php-${{ hashFiles('composer.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-php-
-    - name: Install dependencies
-      run: composer install
+    #- name: Restore composer cache
+    #  uses: actions/cache@v2
+    #  with:
+    #    path: vendor
+    #    key: ${{ runner.os }}-php-${{ hashFiles('composer.lock') }}
+    #   restore-keys: |
+    #      ${{ runner.os }}-php-
+    #- name: Install dependencies
+    #  run: composer install
       
     - name: Copy environment file
       run: |
