@@ -9,8 +9,16 @@ jobs:
   # Continous integration
   test-and-deploy:
     runs-on: ubuntu-latest
-
-    name: PHP ${{ matrix.php }}
+     services:
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ALLOW_EMPTY_PASSWORD: yes
+          MYSQL_DATABASE: test_db
+        ports:
+          - 3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+    name: 🚀 Test and deploy website
 
     steps:
       - name: Checkout code
@@ -36,6 +44,8 @@ jobs:
         run: php artisan key:generate
 
       - name: Execute tests
+        env:
+          DB_PORT: ${{ job.services.mysql.ports[3306] }}
         run: vendor/bin/phpunit
         
       # Continous deployment/development
