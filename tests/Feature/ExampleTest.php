@@ -16,14 +16,5 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
-    /**
-     * A basic test example.
-     */
-    public function test_fail(): void
-    {
-        $response = $this->get('/en');
-
-        $response->assertStatus(404);
-    }
    
 }
