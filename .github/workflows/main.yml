@@ -25,7 +25,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-php-
     - name: Install dependencies
-      run: composer install --no-dev --prefer-dist
+      run: composer install
       
     - name: Copy environment file
       run: |
