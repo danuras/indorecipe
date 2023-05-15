@@ -23,7 +23,8 @@ jobs:
 
       - name: Install Composer dependencies
         run: composer install --prefer-dist --no-interaction --no-progress
-
+      - name: clear cache config
+        run: php artisan config:clear
       - name: Copy environment file
         run: |
               cp .env.example .env
