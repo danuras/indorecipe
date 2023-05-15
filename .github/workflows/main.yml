@@ -27,16 +27,18 @@ jobs:
         run: composer install --prefer-dist --no-interaction --no-progress
 
       - name: Copy environment file
-        run: cp .env.example .env
-
+        run: |
+              cp .env.example .env
+              echo "DB_DATABASE=${{ secrets.DB_DATABASE }}">>.env
+              echo "DB_USERNAME=${{ secrets.DB_USERNAME }}">>.env
+              echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}">>.env
       - name: Generate app key
         run: php artisan key:generate
 
       - name: Execute tests
         run: vendor/bin/phpunit
         
-      # Continous deployment/developmen
-
+      # Continous deployment/development
       - name: Restore composer cache
         uses: actions/cache@v2
         with:
@@ -44,16 +46,6 @@ jobs:
           key: ${{ runner.os }}-php-${{ hashFiles('composer.lock') }}
           restore-keys: |
             ${{ runner.os }}-php-
-
-      - name: Install Composer dependencies
-        run: composer install --no-dev --prefer-dist
-
-      - name: Copy environment file
-        run: |
-              cp .env.example .env
-              echo "DB_DATABASE=${{ secrets.DB_DATABASE }}">>.env
-              echo "DB_USERNAME=${{ secrets.DB_USERNAME }}">>.env
-              echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}">>.env
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
