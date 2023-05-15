@@ -9,7 +9,7 @@ jobs:
   # Continous integration
   test-and-deploy:
     runs-on: ubuntu-latest
-     services:
+    services:
       mysql:
         image: mysql:5.7
         env:
