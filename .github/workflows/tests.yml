@@ -39,6 +39,12 @@ jobs:
 
       - name: Copy environment file
         run: cp .env.example .env
+        
+      - name: Run migration
+        run: php artisan migrate
+     
+      - name: Run seeder
+        run: php artisan db:seed --class=DatabaseSeeder
 
       - name: Generate app key
         run: php artisan key:generate
