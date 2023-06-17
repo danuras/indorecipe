@@ -1,0 +1,23 @@
+:root {
+    --ylnMnBlue: #26547C;
+    --brightPink: #EF476F;
+    --sunglow: #FFD166;
+    --emerald: #06D6A0;
+    --babyPowder: #FFFCF9;
+}
+
+/* navbar */
+nav {
+    background-color: var(--ylnMnBlue);
+}
+/* navbar end */
+
+/* main */
+main .container {
+    padding-top: 5rem;
+}
+
+main p {
+    color: black;
+}
+/* main end */
