@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->json('images');
             $table->unsignedInteger('portion');
-            $table->time('cooking_time');
+            $table->unsignedInteger('cooking_time');
             $table->longText('description');
             $table->unsignedBigInteger('origin_id');
             $table->unsignedBigInteger('category_id');

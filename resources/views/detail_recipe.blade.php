@@ -12,8 +12,8 @@
             @endforeach
             <div class='col'>
                 <h1>{{$recipe->name}}</h1>
-                <p>Lama Penyajian: {{$recipe->cooking_time}}</p>
-                <p>Porsi: {{$recipe->portion}}</p>
+                <p>Lama Penyajian: {{$recipe->cooking_time}} menit</p>
+                <p>Porsi: {{$recipe->portion}} orang</p>
             </div>
         </div>
         <div class='col'>

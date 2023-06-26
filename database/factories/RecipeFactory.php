@@ -22,7 +22,7 @@ class RecipeFactory extends Factory
             'name' => fake()->name(),
             'images' => fake(),
             'portion' => fake()->numberBetween(0, 50000),
-            'cooking_time' => fake()->time(),
+            'cooking_time' => fake()->numberBetween(10, 180),
             'description' => fake()->text(),
             'origin_id' => Recipe::factory(),
             'category_id' => Category::factory(),
