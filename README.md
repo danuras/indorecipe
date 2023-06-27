@@ -34,8 +34,11 @@
     <li>Buka url <code style="white-space: pre;">127.0.0.1</code> pada browser</li>
 </ol>
 
+
+
 <h2>Cara mengosongkan isi database</h2>
 <ol>
     <li>Run <code style="white-space: pre;">php artisan migrate:rollback</code></li>
     <li>Run <code style="white-space: pre;">php artisan migrate</code></li>
 </ol>
+<h2>Link (sementara): https://portalmasakanindonesia.000webhostapp.com</h2>
